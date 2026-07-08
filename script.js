@@ -368,6 +368,11 @@ function initFormHandling() {
   });
 }
 
+function initFooterYear() {
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+}
+
 function initApp() {
   if (!progressBar) {
     progressBar = document.createElement('div');
@@ -385,6 +390,7 @@ function initApp() {
   initSmoothScroll();
   initThemeToggle();
   initTypingControl();
+  initFooterYear();
 }
 
 window.addEventListener('scroll', onScroll, { passive: true });
